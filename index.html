@@ -160,7 +160,7 @@ body {
 .letter-hint { color: var(--fg2); font-size: .88rem; }
 .answer-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px; }
 .answer-row { display: flex; align-items: center; gap: 10px; }
-.answer-row .cat { width: 86px; flex-shrink: 0; font-weight: 700; font-size: .9rem; }
+.answer-row .cat { width: 100px; flex-shrink: 0; font-weight: 700; font-size: .9rem; }
 .score-table { width: 100%; border-collapse: collapse; }
 .score-table th {
   font-size: .73rem; font-weight: 700; color: var(--fg2); text-transform: uppercase;
@@ -288,6 +288,14 @@ select.inp { appearance: none; cursor: pointer; }
         <span class="cat">📦 Nesne</span>
         <input type="text" class="inp answer-inp" data-cat="object" placeholder="Nesne…"  maxlength="30">
       </div>
+      <div class="answer-row">
+        <span class="cat">🌿 Bitki</span>
+        <input type="text" class="inp answer-inp" data-cat="plant"  placeholder="Bitki…"  maxlength="30">
+      </div>
+      <div class="answer-row">
+        <span class="cat">🎬 Film/Dizi</span>
+        <input type="text" class="inp answer-inp" data-cat="movie"  placeholder="Film veya dizi…" maxlength="40">
+      </div>
     </div>
     <button class="btn btn-pink" id="btn-dur">🛑 DUR!</button>
     <div id="dur-banner" class="banner banner-info" hidden style="margin-top:14px"></div>
@@ -339,10 +347,12 @@ const firebaseConfig = {
 
 // ── Constants ──────────────────────────────────────────────────────
 const CATS = [
-  { key: 'name',   label: '👤 İsim'   },
-  { key: 'city',   label: '🌆 Şehir'  },
-  { key: 'animal', label: '🦁 Hayvan' },
-  { key: 'object', label: '📦 Nesne'  },
+  { key: 'name',   label: '👤 İsim'       },
+  { key: 'city',   label: '🌆 Şehir'      },
+  { key: 'animal', label: '🦁 Hayvan'     },
+  { key: 'object', label: '📦 Nesne'      },
+  { key: 'plant',  label: '🌿 Bitki'      },
+  { key: 'movie',  label: '🎬 Film/Dizi'  },
 ];
 const LETTERS    = [...'ABCDEFGHİKLMNOPRSTUYZ'];
 const TIMER_SEC  = 90;
