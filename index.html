@@ -6,7 +6,6 @@
 <title>İsim Şehir Hayvan</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap">
 <style>
-/* ── Tokens ──────────────────────────────────────────────────────── */
 :root {
   --bg:       #f0eeff;
   --surface:  #ffffff;
@@ -51,9 +50,7 @@
   --shadow-s: 0 2px 10px rgba(0,0,0,0.35);
   color-scheme: dark;
 }
-
 * { box-sizing: border-box; }
-
 body {
   margin: 0;
   background: var(--bg);
@@ -66,195 +63,120 @@ body {
   padding-block: 32px;
   min-height: 100dvh;
 }
-
 #app { max-width: 520px; margin: 0 auto; }
-
-/* ── Screens ─────────────────────────────────────────────────────── */
 .screen { display: none; }
 .screen.active { display: block; }
-
-/* ── Logo ────────────────────────────────────────────────────────── */
 .logo { text-align: center; margin-bottom: 32px; }
 .logo h1 {
   font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 2.6rem;
-  color: var(--accent);
-  margin: 0 0 2px;
-  letter-spacing: -1px;
+  font-weight: 900; font-size: 2.6rem;
+  color: var(--accent); margin: 0 0 2px; letter-spacing: -1px;
 }
 .logo .sub { color: var(--fg2); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; }
-
-/* ── Cards ───────────────────────────────────────────────────────── */
 .card {
-  background: var(--surface);
-  border-radius: var(--r);
-  padding: 22px;
-  box-shadow: var(--shadow-s);
-  margin-bottom: 14px;
+  background: var(--surface); border-radius: var(--r);
+  padding: 22px; box-shadow: var(--shadow-s); margin-bottom: 14px;
 }
 .card-title {
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: var(--fg2);
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  margin-bottom: 14px;
+  font-weight: 700; font-size: 0.85rem; color: var(--fg2);
+  text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 14px;
 }
-
-/* ── Buttons ─────────────────────────────────────────────────────── */
 .btn {
-  display: block; width: 100%;
-  padding: 14px 20px;
+  display: block; width: 100%; padding: 14px 20px;
   border: none; border-radius: var(--r-sm);
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800; font-size: 1rem;
-  cursor: pointer;
-  transition: transform .12s, opacity .12s;
-  text-align: center;
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem;
+  cursor: pointer; transition: transform .12s, opacity .12s; text-align: center;
 }
 .btn:active { transform: scale(.96); }
 .btn:disabled { opacity: .45; cursor: default; transform: none; }
-
 .btn-primary  { background: var(--accent); color: #fff; box-shadow: 0 4px 18px rgba(91,79,245,.3); }
 .btn-primary:not(:disabled):hover { background: var(--accent-h); }
 .btn-secondary { background: var(--surface2); color: var(--fg); }
 .btn-green  { background: var(--green); color: #fff; box-shadow: 0 4px 18px rgba(5,150,105,.3); }
-.btn-pink   { background: var(--pink);  color: #fff; box-shadow: 0 4px 18px rgba(224,52,138,.3); font-size: 1.25rem; padding: 18px; }
+.btn-pink   { background: var(--pink); color: #fff; box-shadow: 0 4px 18px rgba(224,52,138,.3); font-size: 1.25rem; padding: 18px; }
 .btn-sm { display: inline-block; width: auto; padding: 8px 18px; font-size: .85rem; }
 .btn-row { display: flex; gap: 10px; }
 .btn-row .btn { flex: 1; }
-
-/* ── Inputs ──────────────────────────────────────────────────────── */
 .field { margin-bottom: 14px; }
 .field:last-child { margin-bottom: 0; }
 .lbl {
-  display: block;
-  font-weight: 600; font-size: .8rem;
-  color: var(--fg2);
-  text-transform: uppercase; letter-spacing: .5px;
-  margin-bottom: 6px;
+  display: block; font-weight: 600; font-size: .8rem; color: var(--fg2);
+  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px;
 }
 .inp {
   width: 100%; padding: 12px 16px;
-  border: 2px solid var(--surface2);
-  border-radius: var(--r-sm);
-  background: var(--bg); color: var(--fg);
-  font-size: 1rem; font-family: inherit;
-  outline: none;
-  transition: border-color .2s;
+  border: 2px solid var(--surface2); border-radius: var(--r-sm);
+  background: var(--bg); color: var(--fg); font-size: 1rem; font-family: inherit;
+  outline: none; transition: border-color .2s;
 }
 .inp:focus { border-color: var(--accent); }
 .inp::placeholder { color: var(--fg2); opacity: .7; }
 .inp.locked { background: var(--surface2); pointer-events: none; }
-
-/* ── Room code ───────────────────────────────────────────────────── */
 .room-code {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900; font-size: 2.4rem;
-  color: var(--accent);
-  letter-spacing: 8px; text-align: center;
-  padding: 20px 16px;
-  background: var(--surface2);
-  border-radius: var(--r-sm);
-  margin: 10px 0;
-  font-variant-numeric: tabular-nums;
+  font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 2.4rem;
+  color: var(--accent); letter-spacing: 8px; text-align: center;
+  padding: 20px 16px; background: var(--surface2); border-radius: var(--r-sm);
+  margin: 10px 0; font-variant-numeric: tabular-nums;
 }
-
-/* ── Player list ─────────────────────────────────────────────────── */
 .player-list { display: flex; flex-direction: column; gap: 10px; }
 .player-row {
   display: flex; align-items: center; gap: 12px;
-  padding: 11px 14px;
-  background: var(--surface2);
-  border-radius: var(--r-sm);
+  padding: 11px 14px; background: var(--surface2); border-radius: var(--r-sm);
 }
 .avatar {
   width: 34px; height: 34px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800; font-size: .95rem; color: #fff;
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: .95rem; color: #fff;
   flex-shrink: 0;
 }
 .player-name { font-weight: 600; }
 .you-badge  { font-size: .75rem; color: var(--fg2); }
 .host-badge {
-  margin-left: auto;
-  background: var(--accent); color: #fff;
-  font-size: .68rem; font-weight: 700;
-  padding: 2px 8px; border-radius: 20px;
+  margin-left: auto; background: var(--accent); color: #fff;
+  font-size: .68rem; font-weight: 700; padding: 2px 8px; border-radius: 20px;
   text-transform: uppercase; letter-spacing: .4px;
 }
 .score-badge {
-  margin-left: auto;
-  font-weight: 700; font-size: 1rem;
+  margin-left: auto; font-weight: 700; font-size: 1rem;
   color: var(--accent); font-variant-numeric: tabular-nums;
 }
-
-/* ── Divider ─────────────────────────────────────────────────────── */
 .or {
   display: flex; align-items: center; gap: 12px;
-  color: var(--fg2); font-size: .82rem;
-  margin: 16px 0;
+  color: var(--fg2); font-size: .82rem; margin: 16px 0;
 }
 .or::before, .or::after { content: ''; flex: 1; height: 1px; background: var(--surface2); }
-
-/* ── Game round info ─────────────────────────────────────────────── */
 .round-bar {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 16px;
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;
 }
 .round-label { font-size: .82rem; color: var(--fg2); font-weight: 600; text-transform: uppercase; letter-spacing: .4px; }
 .round-num { font-family: 'Nunito', sans-serif; font-weight: 900; color: var(--accent); }
-
 .timer-track { width: 100%; height: 7px; background: var(--surface2); border-radius: 4px; margin-bottom: 24px; overflow: hidden; }
 .timer-fill  { height: 100%; border-radius: 4px; transition: width .2s linear, background .3s; }
-
 .letter-wrap { text-align: center; margin-bottom: 28px; }
 .big-letter {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900; font-size: 7.5rem; line-height: 1;
-  color: var(--accent);
-  text-shadow: 0 4px 28px rgba(91,79,245,.2);
+  font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 7.5rem; line-height: 1;
+  color: var(--accent); text-shadow: 0 4px 28px rgba(91,79,245,.2);
 }
 .letter-hint { color: var(--fg2); font-size: .88rem; }
-
 .answer-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px; }
 .answer-row { display: flex; align-items: center; gap: 10px; }
 .answer-row .cat { width: 86px; flex-shrink: 0; font-weight: 700; font-size: .9rem; }
-
-/* ── Scoring table ───────────────────────────────────────────────── */
 .score-table { width: 100%; border-collapse: collapse; }
 .score-table th {
-  font-size: .73rem; font-weight: 700;
-  color: var(--fg2); text-transform: uppercase; letter-spacing: .5px;
-  padding: 8px 10px; text-align: left;
-  border-bottom: 2px solid var(--surface2);
+  font-size: .73rem; font-weight: 700; color: var(--fg2); text-transform: uppercase;
+  letter-spacing: .5px; padding: 8px 10px; text-align: left; border-bottom: 2px solid var(--surface2);
 }
 .score-table td { padding: 10px 10px; border-bottom: 1px solid var(--surface2); vertical-align: middle; }
 .score-table tr:last-child td { border-bottom: none; }
 .score-table .player-cell { display: flex; align-items: center; gap: 8px; }
-
-.pill {
-  display: inline-block; padding: 2px 10px;
-  border-radius: 20px; font-size: .78rem; font-weight: 700;
-  font-variant-numeric: tabular-nums;
-}
+.pill { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: .78rem; font-weight: 700; font-variant-numeric: tabular-nums; }
 .pill-10 { background: rgba(5,150,105,.14); color: var(--green); }
 .pill-5  { background: rgba(217,119,6,.14);  color: var(--yellow); }
 .pill-0  { background: rgba(220,38,38,.1);   color: var(--red); }
-
-/* ── Status banner ───────────────────────────────────────────────── */
-.banner {
-  padding: 12px 16px; border-radius: var(--r-sm);
-  font-weight: 600; font-size: .9rem; margin-bottom: 14px;
-  text-align: center;
-}
+.banner { padding: 12px 16px; border-radius: var(--r-sm); font-weight: 600; font-size: .9rem; margin-bottom: 14px; text-align: center; }
 .banner-info    { background: rgba(91,79,245,.1);  color: var(--accent); }
 .banner-success { background: rgba(5,150,105,.12); color: var(--green); }
 .banner-warn    { background: rgba(220,38,38,.1);  color: var(--red); }
-
-/* ── Podium ──────────────────────────────────────────────────────── */
 .podium { display: flex; justify-content: center; align-items: flex-end; gap: 10px; margin: 22px 0 28px; }
 .podium-col { display: flex; flex-direction: column; align-items: center; gap: 7px; }
 .podium-name { font-weight: 700; font-size: .82rem; max-width: 80px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -267,90 +189,28 @@ body {
 .pb2 { height: 74px;  background: #9ba3b8; }
 .pb3 { height: 55px;  background: #c97b40; }
 .podium-pts { font-size: .78rem; color: var(--fg2); font-variant-numeric: tabular-nums; }
-
-/* ── Spinner ─────────────────────────────────────────────────────── */
 .spinner { text-align: center; padding: 32px; color: var(--fg2); }
-
-/* ── Error ───────────────────────────────────────────────────────── */
 .err-msg { color: var(--red); font-size: .82rem; margin-top: 6px; }
-
 select.inp { appearance: none; cursor: pointer; }
-
-/* ── Setup screen ────────────────────────────────────────────────── */
-#s-setup { background: var(--surface); border-radius: var(--r); padding: 28px 22px; box-shadow: var(--shadow); }
-#s-setup h2 { font-family: 'Nunito', sans-serif; font-weight: 900; color: var(--accent); margin: 0 0 18px; font-size: 1.5rem; }
-#s-setup ol { padding-left: 22px; color: var(--fg2); font-size: .92rem; line-height: 2; }
-#s-setup ol li { margin-bottom: 6px; }
-#s-setup code {
-  background: var(--surface2); padding: 2px 8px;
-  border-radius: 6px; font-size: .88rem; color: var(--accent);
-  font-family: 'Courier New', monospace;
-}
-#s-setup textarea {
-  width: 100%; padding: 12px 14px;
-  border: 2px solid var(--surface2);
-  border-radius: var(--r-sm);
-  background: var(--bg); color: var(--fg);
-  font-size: .82rem; font-family: 'Courier New', monospace;
-  outline: none; resize: vertical;
-  min-height: 170px;
-  transition: border-color .2s;
-  margin: 10px 0 14px;
-}
-#s-setup textarea:focus { border-color: var(--accent); }
 </style>
 </head>
 <body>
-
 <div id="app">
 
-  <!-- ══ FIREBASE SETUP (sadece config girilmemişse gösterilir) ═══ -->
-  <div id="s-setup" class="screen active">
-    <h2>🔧 Firebase Kurulumu</h2>
-    <p style="color:var(--fg2);font-size:.9rem;margin-top:0">
-      Oyun gerçek zamanlı çalışmak için Firebase Firestore kullanır.<br>
-      Aşağıya kendi Firebase config'ini yapıştır, ardından Kaydet'e tıkla.
-    </p>
-    <ol>
-      <li><a href="https://console.firebase.google.com" target="_blank" style="color:var(--accent)">console.firebase.google.com</a> adresine git</li>
-      <li>Yeni proje oluştur → <strong>Build → Firestore Database</strong> → Test modunda başlat</li>
-      <li>⚙️ Proje Ayarları → Genel → Web uygulaması ekle (<code>&lt;/&gt;</code>)</li>
-      <li>Çıkan <code>firebaseConfig</code> objesini kopyala ve aşağıya yapıştır</li>
-    </ol>
-    <label class="lbl">Firebase Config (JSON objesi olarak yapıştır)</label>
-    <textarea id="config-input" placeholder='{
-  "apiKey": "...",
-  "authDomain": "...",
-  "projectId": "...",
-  "storageBucket": "...",
-  "messagingSenderId": "...",
-  "appId": "..."
-}'></textarea>
-    <div class="err-msg" id="config-err" hidden></div>
-    <button class="btn btn-primary" id="btn-save-config">💾 Config'i Kaydet ve Başla</button>
-    <p style="font-size:.78rem;color:var(--fg2);margin-top:14px;text-align:center">
-      Config tarayıcının <code>localStorage</code>'ına kaydedilir, sadece bu cihazda geçerlidir.
-    </p>
-  </div>
-
-  <!-- ══ LOBBY ════════════════════════════════════════════════════ -->
-  <div id="s-lobby" class="screen">
+  <!-- LOBBY -->
+  <div id="s-lobby" class="screen active">
     <div class="logo">
       <h1>İSŞHA</h1>
       <div class="sub">İsim · Şehir · Hayvan · Nesne</div>
     </div>
-
     <div class="card">
       <div class="field">
         <label class="lbl" for="pname">Adın</label>
         <input id="pname" type="text" class="inp" placeholder="Adını gir" maxlength="20" autocomplete="off">
       </div>
     </div>
-
     <button class="btn btn-primary" id="btn-create">🎮 Oda Kur</button>
-
     <div class="or">ya da</div>
-
     <div class="card">
       <div class="field">
         <label class="lbl" for="jcode">Oda Kodu ile Katıl</label>
@@ -361,31 +221,21 @@ select.inp { appearance: none; cursor: pointer; }
       </div>
     </div>
     <button class="btn btn-secondary" id="btn-join">🚪 Odaya Katıl</button>
-
-    <div style="text-align:center;margin-top:18px">
-      <button class="btn btn-sm btn-secondary" id="btn-reset-config" style="width:auto;font-size:.78rem;color:var(--fg2)">
-        ⚙️ Firebase Config'i Değiştir
-      </button>
-    </div>
-
     <div id="lobby-status" hidden style="text-align:center;padding:14px;color:var(--fg2);font-size:.9rem"></div>
   </div>
 
-  <!-- ══ WAITING ══════════════════════════════════════════════════ -->
+  <!-- WAITING -->
   <div id="s-wait" class="screen">
     <div class="logo"><h1>İSŞHA</h1></div>
-
     <div class="card">
       <div class="card-title">Oda Kodu</div>
       <div class="room-code" id="w-code">------</div>
       <div style="text-align:center;color:var(--fg2);font-size:.8rem;margin-top:4px">Arkadaşlarınla paylaş</div>
     </div>
-
     <div class="card">
       <div class="card-title">Oyuncular <span id="w-pcount" style="font-weight:400"></span></div>
       <div class="player-list" id="w-players"></div>
     </div>
-
     <div id="host-panel" hidden>
       <div class="card">
         <div class="field">
@@ -403,13 +253,12 @@ select.inp { appearance: none; cursor: pointer; }
         Başlamak için en az 1 oyuncu daha gerekli
       </div>
     </div>
-
     <div id="guest-panel" hidden>
       <div class="banner banner-info">⏳ Host oyunu başlatmayı bekliyor…</div>
     </div>
   </div>
 
-  <!-- ══ GAME ═════════════════════════════════════════════════════ -->
+  <!-- GAME -->
   <div id="s-game" class="screen">
     <div class="round-bar">
       <span class="round-label">Tur <span class="round-num" id="g-round">1</span>/<span id="g-total">5</span></span>
@@ -425,11 +274,11 @@ select.inp { appearance: none; cursor: pointer; }
     <div class="answer-grid">
       <div class="answer-row">
         <span class="cat">👤 İsim</span>
-        <input type="text" class="inp answer-inp" data-cat="name"   placeholder="İsim…"  maxlength="30">
+        <input type="text" class="inp answer-inp" data-cat="name"   placeholder="İsim…"   maxlength="30">
       </div>
       <div class="answer-row">
         <span class="cat">🌆 Şehir</span>
-        <input type="text" class="inp answer-inp" data-cat="city"   placeholder="Şehir…" maxlength="30">
+        <input type="text" class="inp answer-inp" data-cat="city"   placeholder="Şehir…"  maxlength="30">
       </div>
       <div class="answer-row">
         <span class="cat">🦁 Hayvan</span>
@@ -437,14 +286,14 @@ select.inp { appearance: none; cursor: pointer; }
       </div>
       <div class="answer-row">
         <span class="cat">📦 Nesne</span>
-        <input type="text" class="inp answer-inp" data-cat="object" placeholder="Nesne…" maxlength="30">
+        <input type="text" class="inp answer-inp" data-cat="object" placeholder="Nesne…"  maxlength="30">
       </div>
     </div>
     <button class="btn btn-pink" id="btn-dur">🛑 DUR!</button>
     <div id="dur-banner" class="banner banner-info" hidden style="margin-top:14px"></div>
   </div>
 
-  <!-- ══ SCORING ══════════════════════════════════════════════════ -->
+  <!-- SCORING -->
   <div id="s-score" class="screen">
     <div class="round-bar">
       <span class="round-label">Tur <span class="round-num" id="sc-round">1</span> Sonuçları</span>
@@ -459,11 +308,9 @@ select.inp { appearance: none; cursor: pointer; }
     </div>
   </div>
 
-  <!-- ══ FINAL ════════════════════════════════════════════════════ -->
+  <!-- FINAL -->
   <div id="s-final" class="screen">
-    <div class="logo">
-      <h1>🏆 Oyun Bitti!</h1>
-    </div>
+    <div class="logo"><h1>🏆 Oyun Bitti!</h1></div>
     <div id="final-podium"></div>
     <div class="card">
       <div class="card-title">Skor Tablosu</div>
@@ -474,58 +321,54 @@ select.inp { appearance: none; cursor: pointer; }
 
 </div>
 
-<!-- Firebase SDK (compat / global-namespace versiyonu — CDN'den) -->
+<!-- Firebase (compat build — tek dosya, ES module gerektirmez) -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
 <script>
+// ── Firebase Config ────────────────────────────────────────────────
+const firebaseConfig = {
+  apiKey:            "AIzaSyA8JW6GZNTROOv2QrMtRub6qh5jIi8oMU0",
+  authDomain:        "isimsehir-c1cbf.firebaseapp.com",
+  projectId:         "isimsehir-c1cbf",
+  storageBucket:     "isimsehir-c1cbf.firebasestorage.app",
+  messagingSenderId: "620790425832",
+  appId:             "1:620790425832:web:cd2a8e043b74016401015d",
+  measurementId:     "G-QRLMJ8PXBD"
+};
+
 // ── Constants ──────────────────────────────────────────────────────
 const CATS = [
-  {key:'name',   label:'👤 İsim'},
-  {key:'city',   label:'🌆 Şehir'},
-  {key:'animal', label:'🦁 Hayvan'},
-  {key:'object', label:'📦 Nesne'},
+  { key: 'name',   label: '👤 İsim'   },
+  { key: 'city',   label: '🌆 Şehir'  },
+  { key: 'animal', label: '🦁 Hayvan' },
+  { key: 'object', label: '📦 Nesne'  },
 ];
-const LETTERS = [...'ABCDEFGHİKLMNOPRSTUYZ'];
-const TIMER_SEC = 90;
+const LETTERS    = [...'ABCDEFGHİKLMNOPRSTUYZ'];
+const TIMER_SEC  = 90;
 const COLLECT_MS = 3200;
-const LS_CONFIG_KEY = 'issha_firebase_config';
 
 // ── State ──────────────────────────────────────────────────────────
-let db = null;
-let myId = null;
-let myName = '';
-let currentRoom = null;
-let isHost = false;
-let unsubs = [];
-let gameState = {};
-let timerInterval = null;
-let myAnswerSaved = false;
+let db, myId, myName = '', currentRoom = null;
+let isHost = false, unsubs = [], gameState = {};
+let timerInterval = null, myAnswerSaved = false;
 
 // ── Helpers ────────────────────────────────────────────────────────
 const $  = id => document.getElementById(id);
 const qs = s  => document.querySelectorAll(s);
 
 function showScreen(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  $(`s-${id}`).classList.add('active');
+  qs('.screen').forEach(s => s.classList.remove('active'));
+  $('s-' + id).classList.add('active');
 }
-
 function genCode() {
-  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  const ch = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
   let r = '';
-  for (let i = 0; i < 6; i++) r += chars[Math.floor(Math.random() * chars.length)];
+  for (let i = 0; i < 6; i++) r += ch[Math.floor(Math.random() * ch.length)];
   return r;
 }
-
-function pickLetter() {
-  return LETTERS[Math.floor(Math.random() * LETTERS.length)];
-}
-
-/** Basit UUID yerine rastgele ID */
-function genId() {
-  return Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2);
-}
+function pickLetter() { return LETTERS[Math.floor(Math.random() * LETTERS.length)]; }
+function genId()      { return Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2); }
 
 const AVATAR_COLORS = ['#5b4ff5','#e0348a','#059669','#d97706','#7c3aed','#0891b2','#b45309','#be185d'];
 function avatarColor(name) {
@@ -533,163 +376,57 @@ function avatarColor(name) {
   for (const c of name) h = (h * 31 + c.charCodeAt(0)) % AVATAR_COLORS.length;
   return AVATAR_COLORS[h];
 }
-
 function playerRowHTML(p, showScore = false) {
-  return `
-    <div class="player-row">
-      <div class="avatar" style="background:${avatarColor(p.name)}">${p.name[0].toUpperCase()}</div>
-      <span class="player-name">${p.name}</span>
-      ${p.id === myId ? '<span class="you-badge">(sen)</span>' : ''}
-      ${showScore ? `<span class="score-badge">${p.score ?? 0}</span>` : ''}
-    </div>`;
+  return `<div class="player-row">
+    <div class="avatar" style="background:${avatarColor(p.name)}">${p.name[0].toUpperCase()}</div>
+    <span class="player-name">${p.name}</span>
+    ${p.id === myId ? '<span class="you-badge">(sen)</span>' : ''}
+    ${showScore ? `<span class="score-badge">${p.score ?? 0}</span>` : ''}
+  </div>`;
 }
-
 function cleanupSubs() {
   unsubs.forEach(fn => { try { fn(); } catch(e) {} });
   unsubs = [];
   if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
 }
-
 function getMyAnswers() {
   const ans = {};
   qs('.answer-inp').forEach(inp => { ans[inp.dataset.cat] = inp.value.trim(); });
   return ans;
 }
-
 function lockInputs() {
   qs('.answer-inp').forEach(inp => inp.classList.add('locked'));
   $('btn-dur').disabled = true;
-}
-
-// ── Firebase Setup Screen ──────────────────────────────────────────
-function initSetupScreen() {
-  $('btn-save-config').onclick = () => {
-    const raw = $('config-input').value.trim();
-    const errEl = $('config-err');
-    errEl.setAttribute('hidden', '');
-
-    // JSON veya JS objesi olarak dene
-    let cfg;
-    try {
-      // Düz JSON
-      cfg = JSON.parse(raw);
-    } catch(e1) {
-      // JS literali olabilir: const x = {...} ya da sadece {...}
-      try {
-        const stripped = raw
-          .replace(/^const\s+\w+\s*=\s*/, '')  // "const x = " kaldır
-          .replace(/;?\s*$/, '')                 // son noktalı virgülü kaldır
-          .replace(/([{,]\s*)(\w+)\s*:/g, '$1"$2":') // anahtar kelimelerini tırnakla
-          .replace(/'/g, '"');                   // tek tırnakları çift yap
-        cfg = JSON.parse(stripped);
-      } catch(e2) {
-        errEl.textContent = 'Config geçerli değil. Lütfen Firebase konsolundaki tam objeyi yapıştır.';
-        errEl.removeAttribute('hidden');
-        return;
-      }
-    }
-
-    if (!cfg.projectId || !cfg.apiKey) {
-      errEl.textContent = 'Config eksik — projectId ve apiKey zorunlu.';
-      errEl.removeAttribute('hidden');
-      return;
-    }
-
-    try {
-      localStorage.setItem(LS_CONFIG_KEY, JSON.stringify(cfg));
-    } catch(e) {}
-
-    startFirebase(cfg);
-  };
-}
-
-// ── Firebase Init ──────────────────────────────────────────────────
-function startFirebase(cfg) {
-  try {
-    // Zaten initialize edildiyse mevcut uygulamayı kullan
-    if (firebase.apps.length === 0) {
-      firebase.initializeApp(cfg);
-    }
-    db = firebase.firestore();
-
-    // Çevrimdışı kalıcılığı etkinleştir (isteğe bağlı, hataları yut)
-    db.enablePersistence({ synchronizeTabs: true }).catch(() => {});
-
-    // Oyuncu ID'si — localStorage'da sakla
-    myId = localStorage.getItem('issha_myid');
-    if (!myId) {
-      myId = genId();
-      localStorage.setItem('issha_myid', myId);
-    }
-
-    showScreen('lobby');
-    attachLobbyEvents();
-  } catch(e) {
-    alert('Firebase başlatılamadı: ' + (e.message || e));
-  }
-}
-
-// ── Lobby Events ───────────────────────────────────────────────────
-function attachLobbyEvents() {
-  $('btn-create').onclick = handleCreate;
-  $('btn-join').onclick   = handleJoin;
-  $('btn-start').onclick  = handleStart;
-  $('btn-dur').onclick    = handleDur;
-  $('btn-next').onclick   = handleNext;
-  $('btn-again').onclick  = () => location.reload();
-  $('btn-reset-config').onclick = () => {
-    localStorage.removeItem(LS_CONFIG_KEY);
-    location.reload();
-  };
-
-  $('jcode').addEventListener('input', e => {
-    e.target.value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,'');
-  });
 }
 
 // ── Create Room ────────────────────────────────────────────────────
 async function handleCreate() {
   const name = $('pname').value.trim();
   if (!name) { alert('Lütfen adını gir.'); return; }
-  myName = name;
-  isHost = true;
-
+  myName = name; isHost = true;
   const code = genCode();
   currentRoom = code;
-
   await db.doc(`rooms/${code}`).set({
-    status: 'waiting',
-    round: 0,
-    totalRounds: 5,
-    letter: '',
-    durBy: null,
-    hostId: myId,
-    createdAt: Date.now(),
+    status: 'waiting', round: 0, totalRounds: 5,
+    letter: '', durBy: null, hostId: myId, createdAt: Date.now(),
   });
-
-  await db.doc(`rooms/${code}/players/${myId}`).set({
-    name: myName, score: 0, joinedAt: Date.now(),
-  });
-
+  await db.doc(`rooms/${code}/players/${myId}`).set({ name: myName, score: 0, joinedAt: Date.now() });
   enterWaiting();
 }
 
 // ── Join Room ──────────────────────────────────────────────────────
 async function handleJoin() {
-  const name = $('pname').value.trim();
-  const code = $('jcode').value.trim().toUpperCase();
+  const name  = $('pname').value.trim();
+  const code  = $('jcode').value.trim().toUpperCase();
   const errEl = $('join-err');
-  errEl.setAttribute('hidden','');
-
+  errEl.setAttribute('hidden', '');
   if (!name) { alert('Lütfen adını gir.'); return; }
   if (code.length < 6) {
     errEl.textContent = '6 haneli kodu tam gir.';
     errEl.removeAttribute('hidden'); return;
   }
-
   $('btn-join').disabled = true;
   $('btn-join').textContent = 'Kontrol ediliyor…';
-
   try {
     const snap = await db.doc(`rooms/${code}`).get();
     if (!snap.exists) {
@@ -701,15 +438,8 @@ async function handleJoin() {
       errEl.textContent = 'Oyun zaten başlamış. Bir sonraki oyunu bekle.';
       errEl.removeAttribute('hidden'); return;
     }
-
-    myName = name;
-    currentRoom = code;
-    isHost = false;
-
-    await db.doc(`rooms/${code}/players/${myId}`).set({
-      name: myName, score: 0, joinedAt: Date.now(),
-    });
-
+    myName = name; currentRoom = code; isHost = false;
+    await db.doc(`rooms/${code}/players/${myId}`).set({ name: myName, score: 0, joinedAt: Date.now() });
     enterWaiting();
   } catch(e) {
     errEl.textContent = 'Bir hata oluştu: ' + (e.message || e.code || 'Bilinmeyen hata');
@@ -725,33 +455,27 @@ function enterWaiting() {
   cleanupSubs();
   $('w-code').textContent = currentRoom;
   showScreen('wait');
-
   if (isHost) {
     $('host-panel').removeAttribute('hidden');
-    $('guest-panel').setAttribute('hidden','');
+    $('guest-panel').setAttribute('hidden', '');
   } else {
-    $('host-panel').setAttribute('hidden','');
+    $('host-panel').setAttribute('hidden', '');
     $('guest-panel').removeAttribute('hidden');
   }
-
-  const unsubP = db.collection(`rooms/${currentRoom}/players`)
-    .orderBy('joinedAt')
+  const unsubP = db.collection(`rooms/${currentRoom}/players`).orderBy('joinedAt')
     .onSnapshot(snap => {
-      const players = snap.docs.map(d => ({id: d.id, ...d.data()}));
+      const players = snap.docs.map(d => ({ id: d.id, ...d.data() }));
       $('w-pcount').textContent = `(${players.length})`;
-      $('w-players').innerHTML = players.map(p => playerRowHTML(p)).join('');
-
+      $('w-players').innerHTML  = players.map(p => playerRowHTML(p)).join('');
       if (isHost) {
         const others = players.filter(p => p.id !== myId).length;
-        const btn = $('btn-start');
-        btn.disabled = others < 1;
-        $('start-hint').textContent = others < 1
+        $('btn-start').disabled      = others < 1;
+        $('start-hint').textContent  = others < 1
           ? 'Başlamak için en az 1 oyuncu daha gerekli'
           : `${players.length} oyuncu hazır — başlatabilirsin`;
       }
     });
   unsubs.push(unsubP);
-
   const unsubR = db.doc(`rooms/${currentRoom}`).onSnapshot(snap => {
     if (!snap.exists) return;
     const data = snap.data();
@@ -765,96 +489,73 @@ async function handleStart() {
   const totalRounds = parseInt($('round-sel').value);
   const letter = pickLetter();
   await db.doc(`rooms/${currentRoom}`).set({
-    status: 'playing',
-    round: 1,
-    totalRounds,
-    letter,
-    durBy: null,
-    hostId: myId,
-    createdAt: Date.now(),
+    status: 'playing', round: 1, totalRounds, letter,
+    durBy: null, hostId: myId, createdAt: Date.now(),
   });
-  gameState = {status:'playing', round:1, totalRounds, letter, durBy:null, hostId:myId};
+  gameState = { status: 'playing', round: 1, totalRounds, letter, durBy: null, hostId: myId };
   enterGame(gameState);
 }
 
 // ── Enter Game ─────────────────────────────────────────────────────
 function enterGame(roomData) {
   cleanupSubs();
-  gameState = {...roomData};
+  gameState = { ...roomData };
   myAnswerSaved = false;
-
   $('g-round').textContent  = roomData.round;
   $('g-total').textContent  = roomData.totalRounds;
   $('g-letter').textContent = roomData.letter;
-
-  qs('.answer-inp').forEach(inp => {
-    inp.value = '';
-    inp.classList.remove('locked');
-  });
-  $('btn-dur').disabled = false;
+  qs('.answer-inp').forEach(inp => { inp.value = ''; inp.classList.remove('locked'); });
+  $('btn-dur').disabled    = false;
   $('btn-dur').textContent = '🛑 DUR!';
-  $('dur-banner').setAttribute('hidden','');
-
+  $('dur-banner').setAttribute('hidden', '');
   showScreen('game');
-
   setTimeout(() => document.querySelector('.answer-inp')?.focus(), 100);
-
   startTimer();
-
   const unsubR = db.doc(`rooms/${currentRoom}`).onSnapshot(snap => {
     if (!snap.exists) return;
     const data = snap.data();
     if (data.round !== roomData.round) return;
-
     if (data.durBy && data.durBy !== myId && !myAnswerSaved) {
       lockInputs();
       const bn = $('dur-banner');
       bn.textContent = '⏱ Birisi DUR dedi! Cevapların kaydediliyor…';
       bn.removeAttribute('hidden');
-      saveMyAnswers().then(() => {
-        setTimeout(() => enterScoring(data), 1200);
-      });
+      saveMyAnswers().then(() => setTimeout(() => enterScoring(data), 1200));
     }
   });
   unsubs.push(unsubR);
-
-  const unsubP = db.collection(`rooms/${currentRoom}/players`)
-    .onSnapshot(snap => {
-      const peers = snap.docs.filter(d => d.id !== myId).map(d => d.data());
-      $('g-peers').innerHTML = peers.map(p =>
-        `<div class="avatar" style="background:${avatarColor(p.name)};width:28px;height:28px;font-size:.8rem" title="${p.name}">${p.name[0].toUpperCase()}</div>`
-      ).join('');
-    });
+  const unsubP = db.collection(`rooms/${currentRoom}/players`).onSnapshot(snap => {
+    const peers = snap.docs.filter(d => d.id !== myId).map(d => d.data());
+    $('g-peers').innerHTML = peers.map(p =>
+      `<div class="avatar" style="background:${avatarColor(p.name)};width:28px;height:28px;font-size:.8rem" title="${p.name}">${p.name[0].toUpperCase()}</div>`
+    ).join('');
+  });
   unsubs.push(unsubP);
 }
 
 // ── Timer ──────────────────────────────────────────────────────────
 function startTimer() {
-  const fill = $('timer-fill');
+  const fill  = $('timer-fill');
   const start = Date.now();
-  const dur = TIMER_SEC * 1000;
-
+  const dur   = TIMER_SEC * 1000;
   timerInterval = setInterval(() => {
     const pct = Math.max(0, 100 - ((Date.now() - start) / dur * 100));
-    fill.style.width = pct + '%';
+    fill.style.width      = pct + '%';
     fill.style.background = pct > 40 ? 'var(--accent)' : pct > 15 ? 'var(--yellow)' : 'var(--red)';
     if (pct === 0) {
-      clearInterval(timerInterval);
-      timerInterval = null;
+      clearInterval(timerInterval); timerInterval = null;
       if (!$('btn-dur').disabled) handleDur();
     }
   }, 200);
 }
 
-// ── Save My Answers ────────────────────────────────────────────────
+// ── Save Answers ───────────────────────────────────────────────────
 async function saveMyAnswers() {
   if (myAnswerSaved) return;
   myAnswerSaved = true;
-  const answers = getMyAnswers();
   try {
-    await db.doc(`rooms/${currentRoom}/rounds/${gameState.round}/ans/${myId}`).set({
-      ...answers, savedAt: Date.now(),
-    });
+    await db.doc(`rooms/${currentRoom}/rounds/${gameState.round}/ans/${myId}`)
+      .set({ ...getMyAnswers(), savedAt: Date.now() });
   } catch(e) { console.warn('Answer save failed:', e); }
 }
 
@@ -864,32 +565,25 @@ async function handleDur() {
   $('btn-dur').disabled = true;
   lockInputs();
   if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
-
   const bn = $('dur-banner');
   bn.textContent = '✅ DUR dedin! Diğerleri kaydediliyor…';
   bn.removeAttribute('hidden');
-
   await saveMyAnswers();
-
   try {
-    await db.doc(`rooms/${currentRoom}`).update({
-      durBy: myId, durAt: Date.now(),
-    });
+    await db.doc(`rooms/${currentRoom}`).update({ durBy: myId, durAt: Date.now() });
   } catch(e) { console.warn('DUR update failed:', e); }
-
   setTimeout(() => enterScoring(gameState), COLLECT_MS);
 }
 
 // ── Scoring ────────────────────────────────────────────────────────
 async function enterScoring(roomData) {
   cleanupSubs();
-  gameState = {...roomData};
-
+  gameState = { ...roomData };
   $('sc-round').textContent = roomData.round;
   $('sc-loading').removeAttribute('hidden');
-  $('sc-content').setAttribute('hidden','');
-  $('sc-host-btn').setAttribute('hidden','');
-  $('sc-guest-wait').setAttribute('hidden','');
+  $('sc-content').setAttribute('hidden', '');
+  $('sc-host-btn').setAttribute('hidden', '');
+  $('sc-guest-wait').setAttribute('hidden', '');
   showScreen('score');
 
   let answers = {}, players = [];
@@ -899,32 +593,27 @@ async function enterScoring(roomData) {
       db.collection(`rooms/${currentRoom}/players`).orderBy('joinedAt').get(),
     ]);
     ansSnap.docs.forEach(d => { answers[d.id] = d.data(); });
-    players = pSnap.docs.map(d => ({id: d.id, ...d.data()}));
+    players = pSnap.docs.map(d => ({ id: d.id, ...d.data() }));
   } catch(e) {
     $('sc-loading').textContent = 'Veriler yüklenemedi: ' + (e.message || e.code);
     return;
   }
 
   const roundScores = calcScores(answers, players);
-
-  const myRoundScore = roundScores[myId] || 0;
-  const myPlayer = players.find(p => p.id === myId);
+  const myPlayer    = players.find(p => p.id === myId);
   if (myPlayer) {
     try {
-      await db.doc(`rooms/${currentRoom}/players/${myId}`).update({
-        score: (myPlayer.score || 0) + myRoundScore,
-      });
+      await db.doc(`rooms/${currentRoom}/players/${myId}`)
+        .update({ score: (myPlayer.score || 0) + (roundScores[myId] || 0) });
     } catch(e) { console.warn('Score update failed:', e); }
   }
-
   try {
     const pSnap2 = await db.collection(`rooms/${currentRoom}/players`).orderBy('joinedAt').get();
-    players = pSnap2.docs.map(d => ({id: d.id, ...d.data()}));
+    players = pSnap2.docs.map(d => ({ id: d.id, ...d.data() }));
   } catch(e) {}
 
-  renderScoring(answers, players, roundScores, roomData);
-
-  $('sc-loading').setAttribute('hidden','');
+  renderScoring(answers, players, roundScores);
+  $('sc-loading').setAttribute('hidden', '');
   $('sc-content').removeAttribute('hidden');
 
   if (isHost) {
@@ -936,11 +625,8 @@ async function enterScoring(roomData) {
     const unsubR = db.doc(`rooms/${currentRoom}`).onSnapshot(snap => {
       if (!snap.exists) return;
       const data = snap.data();
-      if (data.status === 'playing' && data.round > roomData.round) {
-        enterGame(data);
-      } else if (data.status === 'finished') {
-        enterFinal();
-      }
+      if (data.status === 'playing' && data.round > roomData.round) enterGame(data);
+      else if (data.status === 'finished') enterFinal();
     });
     unsubs.push(unsubR);
   }
@@ -949,50 +635,37 @@ async function enterScoring(roomData) {
 function calcScores(answers, players) {
   const scores = {};
   players.forEach(p => { scores[p.id] = 0; });
-
   CATS.forEach(cat => {
     const valMap = {};
     Object.entries(answers).forEach(([pid, ans]) => {
       const v = (ans[cat.key] || '').trim().toLowerCase();
-      if (v) {
-        if (!valMap[v]) valMap[v] = [];
-        valMap[v].push(pid);
-      }
+      if (v) { if (!valMap[v]) valMap[v] = []; valMap[v].push(pid); }
     });
-    Object.entries(valMap).forEach(([, pids]) => {
+    Object.values(valMap).forEach(pids => {
       const pts = pids.length === 1 ? 10 : 5;
       pids.forEach(pid => { scores[pid] = (scores[pid] || 0) + pts; });
     });
   });
-
   return scores;
 }
 
-function renderScoring(answers, players, roundScores, roomData) {
-  const el = $('sc-content');
+function renderScoring(answers, players, roundScores) {
   let html = '';
-
   CATS.forEach(cat => {
     const valMap = {};
     Object.values(answers).forEach(a => {
       const v = (a[cat.key] || '').trim().toLowerCase();
       if (v) valMap[v] = (valMap[v] || 0) + 1;
     });
-
     html += `<div class="card" style="margin-bottom:12px">
       <div class="card-title">${cat.label}</div>
       <table class="score-table"><thead><tr>
         <th>Oyuncu</th><th>Cevap</th><th>Puan</th>
       </tr></thead><tbody>`;
-
     players.forEach(p => {
-      const ans = answers[p.id] || {};
-      const val = (ans[cat.key] || '').trim();
+      const val = ((answers[p.id] || {})[cat.key] || '').trim();
       let pts = 0, cls = 'pill-0';
-      if (val) {
-        pts = valMap[val.toLowerCase()] === 1 ? 10 : 5;
-        cls = pts === 10 ? 'pill-10' : 'pill-5';
-      }
+      if (val) { pts = valMap[val.toLowerCase()] === 1 ? 10 : 5; cls = pts === 10 ? 'pill-10' : 'pill-5'; }
       html += `<tr>
         <td><div class="player-cell">
           <div class="avatar" style="background:${avatarColor(p.name)};width:26px;height:26px;font-size:.78rem">${p.name[0].toUpperCase()}</div>
@@ -1004,39 +677,29 @@ function renderScoring(answers, players, roundScores, roomData) {
     });
     html += `</tbody></table></div>`;
   });
-
   const sorted = [...players].sort((a,b) => (roundScores[b.id]||0) - (roundScores[a.id]||0));
   html += `<div class="card" style="background:var(--surface2)">
     <div class="card-title">🏅 Bu Tur Puanları</div>
     <div class="player-list">` +
-    sorted.map(p => `
-      <div class="player-row">
-        <div class="avatar" style="background:${avatarColor(p.name)}">${p.name[0].toUpperCase()}</div>
-        <span class="player-name">${p.name}</span>
-        ${p.id === myId ? '<span class="you-badge">(sen)</span>' : ''}
-        <span class="score-badge">+${roundScores[p.id]||0}</span>
-      </div>`).join('') +
-    `</div></div>`;
-
-  el.innerHTML = html;
+    sorted.map(p => `<div class="player-row">
+      <div class="avatar" style="background:${avatarColor(p.name)}">${p.name[0].toUpperCase()}</div>
+      <span class="player-name">${p.name}</span>
+      ${p.id === myId ? '<span class="you-badge">(sen)</span>' : ''}
+      <span class="score-badge">+${roundScores[p.id]||0}</span>
+    </div>`).join('') + `</div></div>`;
+  $('sc-content').innerHTML = html;
 }
 
 // ── Next Round ─────────────────────────────────────────────────────
 async function handleNext() {
-  const isLast = gameState.round >= gameState.totalRounds;
-  if (isLast) {
-    await db.doc(`rooms/${currentRoom}`).update({status: 'finished'});
+  if (gameState.round >= gameState.totalRounds) {
+    await db.doc(`rooms/${currentRoom}`).update({ status: 'finished' });
     enterFinal();
   } else {
     const nextRound = gameState.round + 1;
-    const letter = pickLetter();
-    await db.doc(`rooms/${currentRoom}`).update({
-      status: 'playing',
-      round: nextRound,
-      letter,
-      durBy: null,
-    });
-    enterGame({...gameState, status:'playing', round: nextRound, letter, durBy: null});
+    const letter    = pickLetter();
+    await db.doc(`rooms/${currentRoom}`).update({ status: 'playing', round: nextRound, letter, durBy: null });
+    enterGame({ ...gameState, status: 'playing', round: nextRound, letter, durBy: null });
   }
 }
 
@@ -1044,17 +707,15 @@ async function handleNext() {
 async function enterFinal() {
   cleanupSubs();
   showScreen('final');
-
   let players = [];
   try {
     const snap = await db.collection(`rooms/${currentRoom}/players`).orderBy('score', 'desc').get();
-    players = snap.docs.map(d => ({id: d.id, ...d.data()}));
+    players = snap.docs.map(d => ({ id: d.id, ...d.data() }));
   } catch(e) {}
 
-  const podiumEl = $('final-podium');
   if (players.length >= 2) {
-    const p1 = players[0], p2 = players[1], p3 = players[2];
-    podiumEl.innerHTML = `<div class="podium">
+    const [p1, p2, p3] = players;
+    $('final-podium').innerHTML = `<div class="podium">
       <div class="podium-col">
         <div class="podium-name">${p2.name}</div>
         <div class="podium-block pb2">2</div>
@@ -1072,7 +733,6 @@ async function enterFinal() {
       </div>` : ''}
     </div>`;
   }
-
   $('final-list').innerHTML = players.map((p,i) => `
     <div class="player-row">
       <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.05rem;width:26px;text-align:center;color:${
@@ -1085,21 +745,26 @@ async function enterFinal() {
 
 // ── Boot ───────────────────────────────────────────────────────────
 (function boot() {
-  initSetupScreen();
+  firebase.initializeApp(firebaseConfig);
+  db = firebase.firestore();
+  db.enablePersistence({ synchronizeTabs: true }).catch(() => {});
 
-  // Daha önce kaydedilmiş config var mı?
-  let savedCfg = null;
-  try {
-    const raw = localStorage.getItem(LS_CONFIG_KEY);
-    if (raw) savedCfg = JSON.parse(raw);
-  } catch(e) {}
+  myId = localStorage.getItem('issha_myid');
+  if (!myId) { myId = genId(); localStorage.setItem('issha_myid', myId); }
 
-  if (savedCfg && savedCfg.projectId && savedCfg.apiKey) {
-    startFirebase(savedCfg);
-  }
-  // Yoksa setup ekranı zaten aktif
+  $('btn-create').onclick = handleCreate;
+  $('btn-join').onclick   = handleJoin;
+  $('btn-start').onclick  = handleStart;
+  $('btn-dur').onclick    = handleDur;
+  $('btn-next').onclick   = handleNext;
+  $('btn-again').onclick  = () => location.reload();
+
+  $('jcode').addEventListener('input', e => {
+    e.target.value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+  });
+
+  showScreen('lobby');
 })();
 </script>
-
 </body>
 </html>
